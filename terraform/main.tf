@@ -18,3 +18,11 @@ provider "azurerm" {
   features {}
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "ws-devops"
+    storage_account_name = "cgmsgtf"
+    container_name       = "tfstateazdevops"
+    key                  = "testuser009.tfstate"
+  }
+}
