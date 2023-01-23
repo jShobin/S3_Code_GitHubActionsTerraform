@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "ws-devops"
     storage_account_name = "cgmsgtf"
     container_name       = "tfstateazdevops"
-    key                  = "<your unique name>.tfstate"
+    key                  = "testuser009.tfstate"
   }
 }
 
@@ -18,14 +18,6 @@ provider "azurerm" {
   features {}
 }
 
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "ws-devops"
-    storage_account_name = "cgmsgtf"
-    container_name       = "tfstateazdevops"
-    key                  = "testuser009.tfstate"
-  }
-}
 
 #Get resource group
 data "azurerm_resource_group" "wsdevops" {
