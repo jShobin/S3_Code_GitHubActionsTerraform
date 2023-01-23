@@ -1,4 +1,4 @@
-ariable "client_id" {
+variable "client_id" {
   description = "Application id from app registration in azure active directory."
   type        = string
 }
